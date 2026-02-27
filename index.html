@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghazal Heydari – Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="intro-overlay">
+    <div class="intro-content">
+        <h1 class="intro-text">
+            <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+
+        </h1>
+        <div class="intro-shapes">
+            <div class="circle"></div>
+            <div class="square"></div>
+            <div class="star"></div>
+            <div class="circle small"></div>
+        </div>
+    </div>
+</div>
+
+<header class="site-header animate">
+    <nav class="nav-links animate">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-content animate">
+        <h1>Ghazal Heydari</h1>
+        <p>Graphic Designer & Web Developer</p>
+        <button class="btn-primary">Hire Me</button>
+    </div>
+    <div class="deco circle top-left"></div>
+    <div class="deco star top-right"></div>
+    <div class="deco square bottom-left"></div>
+</header>
+
+<section class="profile-section animate">
+    <img src="C:\Users\Padidar\Desktop\school\resume\pic\photo24276596821.jpg" class="profile-pic">
+</section>
+
+<section id="about" class="card about-card animate">
+    <h2>About Me</h2>
+    <p>Passionate designer with a flair for vibrant visuals and clean code. I specialize in creating interactive experiences that leave a lasting impression.</p>
+    <div class="deco circle bottom-right"></div>
+</section>
+
+<section id="skills" class="card skills-card animate">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+        <div class="skill-item">
+            <h4>HTML & CSS</h4>
+            <div class="skill-bar"><div style="width:95%"></div></div>
+        </div>
+        <div class="skill-item">
+            <h4>JavaScript</h4>
+            <div class="skill-bar"><div style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+            <h4>Photoshop</h4>
+            <div class="skill-bar"><div style="width:90%"></div></div>
+        </div>
+        <div class="skill-item">
+            <h4>UI/UX Design</h4>
+            <div class="skill-bar"><div style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+            <h4>React & Vue</h4>
+            <div class="skill-bar"><div style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+            <h4>Git & VS Code</h4>
+            <div class="skill-bar"><div style="width:90%"></div></div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="card projects-card animate">
+    <h2>Projects</h2>
+    <div class="project-grid">
+        <article class="project-item">
+            <h3>Brand Identity</h3>
+            <p>Logo, color palette, marketing assets with vibrant designs.</p>
+        </article>
+        <article class="project-item">
+            <h3>E-commerce Site</h3>
+            <p>Full-stack UI/UX development with responsive design and animations.</p>
+        </article>
+        <article class="project-item">
+            <h3>Interactive Portfolio</h3>
+            <p>Animations, hover effects, dynamic content and CSS Grid layout.</p>
+        </article>
+        <article class="project-item">
+            <h3>Mobile App UI</h3>
+            <p>Creative app interfaces, smooth transitions, and prototyping.</p>
+        </article>
+    </div>
+</section>
+
+<section id="resume" class="card resume-card animate">
+    <h2>Resume</h2>
+    <div class="resume-content">
+        <p><strong>Education:</strong> Studied software in highschool</p>
+        <p><strong>Experience:</strong> 1 year freelance designer & developer</p>
+        <p><strong>Tools:</strong> Figma, Sketch, VS Code, Git</p>
+    </div>
+</section>
+
+<section id="contact" class="card contact-card animate">
+    <h2>Contact Me</h2>
+    <p>Enter your information below to get in touch!</p>
+    <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Phone Number">
+        <textarea name="message" placeholder="Your Message" rows="5"></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+</section>
+
+<footer class="site-footer">
+    <h2>Follow Me</h2>
+    <p><a href="#">LinkedIn</a> • <a href="#">Behance</a> • <a href="#">Dribbble</a></p>
+    <p>© 2026 Ghazal Heydari • All rights reserved</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const overlay = document.getElementById('intro-overlay');
+    setTimeout(() => {
+        overlay.classList.add('fade-out');
+    }, 3500);
+
+    const animateElements = document.querySelectorAll('.animate');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {threshold:0.1});
+    animateElements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
